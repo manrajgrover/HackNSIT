@@ -1,3 +1,39 @@
 <template name="map">
-	<button class="ui red inverted button">SUBMIT</button>
+	<div class="ui grid">
+		<div class="ui eight wide column">
+        <form class="ui form attached segment" id="eventForm">
+        <div class="field">
+              <label>Crime type</label>
+              <div class="ui fluid search selection dropdown">
+                <input type="hidden" name="crime">
+                <i class="dropdown icon"></i>
+                <div class="default text">Select Type</div>
+                <div class="menu">
+		            <div class="item" data-value="rape"><i class="af flag"></i>Rape</div>
+		            <div class="item" data-value="loud noise"><i class="ax flag"></i>Loud noise</div>
+		            <div class="item" data-value="robbery"><i class="al flag"></i>Robbery</div>
+		            <div class="item" data-value="killing"><i class="dz flag"></i>Killing</div>
+		            <div class="item" data-value="drug addict"><i class="as flag"></i>Drug Addict</div>
+		            <div class="item" data-value="assault"><i class="ad flag"></i>Assault</div>
+          		</div>
+              </div>
+        </div>
+		 <div class="field">
+		   <label>Description</label>
+		   <textarea rows="2" name="description"></textarea>
+		 </div>
+            <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="broadcast" tabindex="0" class="hidden">
+                  <label>Broadcast to emergency centers</label>
+                </div>
+            </div>
+            <button id="submitButton" type="submit" class="ui teal animated button" style="margin-bottom:25px" tabindex="0">
+                <div class="visible content">SUBMIT</div>
+                <div class="hidden content"> <i class="right arrow icon"></i> </div>
+            </button>
+            <div class="ui error message"></div>
+        </form>
+		</div>
+	</div>
 </template>
