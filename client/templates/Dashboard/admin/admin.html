@@ -1,0 +1,32 @@
+<template name="admin">
+	<div class="ui grid center aligned stackable" style="padding-bottom:20px;padding-left:5px;padding-right:5px;padding-top:30px;">
+		{{#if anyPost}}
+			{{#each allPosts}}
+				<div class="row postDetails">
+					<div class="column six wide offerDisp" style="text-align:left !important">
+						<!-- <span style="font-weight:600; font-size: 18px;">OFFER {{index}}</span> -->
+						<a class="ui red ribbon label">SOS # {{index}}</a>
+						<span style="font-size:15px;font-weight:600;">{{ name }}</span>
+						<div class="description pd" >
+							{{ postDetails }}
+						</div>
+					</div>
+					<div class="column two wide offerDisp" style="text-align:left !important">
+						<span style="font-size:18px;font-weight:600;">Address:</span>
+						<div class="description pd" >
+							{{ address }}
+						</div>
+					</div>
+					<div class="column two wide offerDisp" style="text-align:left !important">
+						<span style="font-size:18px;font-weight:600;">Contact:</span>
+						<div class="description pd" >
+							{{ contact }}
+						</div>
+					</div>
+				</div>	
+			{{/each}}
+		{{else}}
+			Sorry, no post to show right now.
+		{{/if}}
+	</div>
+</template>

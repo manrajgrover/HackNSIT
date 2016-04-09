@@ -2,7 +2,7 @@
 * @Author: Manraj Singh
 * @Date:   2016-04-09 21:32:18
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-04-09 22:18:30
+* @Last Modified time: 2016-04-09 23:08:11
 */
 
 function initialize(){
@@ -45,5 +45,5 @@ function initialize(){
 
 
 Template.map.onRendered(function(){
-	google.maps.event.addDomListener(window, 'load', initialize);
+	initialize();
 });
