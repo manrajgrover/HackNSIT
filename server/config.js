@@ -1,5 +1,5 @@
 Meteor.startup(function () {
-
+	var future= Meteor.npmRequire('fibers/future');
 	if(Meteor.settings.deploy){
 		var settings= Meteor.settings;
 

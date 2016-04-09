@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "future": {
+      "version": "2.3.1"
+    }
+  }
+}
