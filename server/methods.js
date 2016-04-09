@@ -55,5 +55,8 @@ Meteor.methods({
 
 		// var x=Events.insert({})
 		
+	},
+	'sos':function(){
+		
 	}
 });

@@ -1,14 +1,29 @@
 <template name="landingPage">
-  <div class="ui ab grid" id="landingDiv">
-  <div class="one column row centered" style="padding-top:30px;">
-    <button class="ui inverted red button">SOS</button>
-    <div>
-      <p>
-        Tap on the button in case of emergency to send
-      </p>
+  <div class="ui ab centered stackable grid" id="landingDiv">
+    <div class="ten wide column">
+    <h3>NEWSFEED</h3>
+      <div class="ui feed">
+      {{#each event in events}}
+        <div class="event" style="background:#eee;margin-bottom:3px;">
+          <div class="label">
+            <i class="pencil icon"></i>
+          </div>
+          <div class="content">
+            <div class="summary">
+              {{event.username}} filed a report on <i>{{event.crimeType}}</i>.
+              <div class="date">{{moment event.timestamp}}</div>
+            </div>
+            <div class="summary" style="font-size:11px;font-weight:300;">
+              {{event.description}}
+              <br><i class="fa fa-globe" style="padding-right:2px;"></i>{{event.address}}
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
     </div>
-  </div>
-  <div class="three column row centered">
-  </div>
+    <div class="five wide column" style="min-height:calc(100vh - 60px);">
+      sdsd
+    </div>
   </div>
 </template>
