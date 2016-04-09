@@ -2,7 +2,7 @@
 * @Author: Manraj Singh
 * @Date:   2016-04-09 21:32:18
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-04-10 00:44:59
+* @Last Modified time: 2016-04-10 00:55:52
 */
 
 function initialize(){
@@ -64,6 +64,7 @@ Template.map.onRendered(function(){
         }
       }
     });
+  $(".ui.dropdown").dropdown();
 });
 
 
