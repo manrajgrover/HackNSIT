@@ -1,0 +1,52 @@
+<template name="signUp">
+<div class="ui ab center aligned grid ">
+    <div class="fourteen wide mobile eight wide tablet eight wide computer column">
+        <div class="ui attached message">
+            <div class="header">Welcome to PitMobil!</div>
+            <p>Fill out the form below to sign-up for a new account</p>
+        </div>
+        <form class="ui form attached segment">
+            <div class="field">
+                <label>Username</label>
+                <div class="ui input">
+                    <input type="text" name="username" placeholder="Your username">
+                </div>
+            </div>
+            <div class="field">
+                <label>E-mail</label>
+                <div class="ui input">
+                    <input type="text" name="email" placeholder="E-mail address">
+                </div>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <div class="ui input">
+                    <input type="password" name="password" placeholder="Select a password">
+                </div>
+            </div>
+<!--                 <div class="field">
+                <label>Confirm password</label>
+                <div class="ui input">
+                    <input type="password" name="confirm" placeholder="Confirm password">
+                </div>
+            </div> -->
+            <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="tnc" tabindex="0" class="hidden">
+                  <label>I agree to the <a href="/tnc" target="_blank">Terms and Conditions</a></label>
+                </div>
+            </div>
+            <button id="submitButton" type="submit" class="ui teal animated button" style="margin-bottom:25px" tabindex="0">
+                <div class="visible content">Signup</div>
+                <div class="hidden content"> <i class="right arrow icon"></i> </div>
+            </button>
+            <div class="ui error message"></div>
+        </form>
+        <div class="ui bottom attached warning message">
+            <i class="icon help"></i>
+            Already signed up? <a href="/signin">Signin here</a> instead.
+        </div>
+    </div>
+</div>
+
+</template>

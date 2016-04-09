@@ -1,0 +1,64 @@
+<template name="navbar">
+
+<div id="navbar" class="ui ab top fixed segment menu">
+  <div class="item brand">
+    <a href="/">Helpy</a>
+  </div>
+  {{#if currentUser}}
+    <div class="ui right dropdown simple item" id="navbarUserDropdown">
+
+      <i class="fa fa-user fa-2x icon-silver"></i> <span class="h-space-light"></span>Hi {{username}}!
+      <i class="dropdown icon"></i>
+            {{>userDropdown}}
+    </div>
+  {{else}}
+    <a class="item right focus" id="signIn" href="/signin">Sign in</a>
+  {{/if}}
+
+</div>
+
+<div id="navbar-mobile" class="ui ab top fixed menu">
+  <div class="item">
+    <a href="/"><b>Pit</b>Mobil</a>
+  </div>
+  <a class="item right focus toggle-sidebar" sidebar-toggle><i class="fa fa-bars"></i></a>
+  </div>
+  <div class="ui ab right sidebar vertical menu">
+    {{#if currentUser}}
+        <i class="fa fa-user fa-2x icon-silver"></i> <span class="h-space-light"></span>Hi {{username}}!
+        <br>
+        <a class="item" href="/profile">Profile</a>
+        <a class="item logout" href="#">Logout</a>
+    {{else}}
+      <a class="item right focus" id="signIn" href="/signin">Sign in</a>
+      <div class="ui modal" id="signInModal">
+        <!-- <div class="header">Header</div>
+        <div class="content">
+          <p>BC</p>
+          <p>Kya kar raha hai</p>
+          <p>Oyee</p> -->
+          {{> signIn}}
+    <!-- </div> -->
+      </div>
+
+    {{/if}}
+    <a class="item" href="/">
+      Home
+    </a>
+    
+  </div>
+
+<div class="pusher">
+  <div class="siteContainer">
+    {{> yield}}
+  </div>
+</div>  
+</template>
+
+<template name="userDropdown">
+  <div class="menu">
+  	<a class="item" href="/profile">Profile</a>
+    <a class="item logout" href="#">Logout</a>
+    <a href="/contact" class="item contact">Contact Us</a>
+  </div>
+</template>

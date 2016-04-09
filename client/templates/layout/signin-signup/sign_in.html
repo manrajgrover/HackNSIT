@@ -1,0 +1,48 @@
+<template name="signIn">
+<div class="ui container two column middle aligned very relaxed stackable grid" id="store-signin">
+  <div class="column">
+    <button class="ui large labeled facebook icon button social" id="facebook-login">
+      <i class="facebook icon"></i>
+      Sign in with Facebook
+    </button>
+    <button class="ui large labeled google plus icon button social" id="google-login">
+      <i class="google plus icon"></i>
+      Sign in with Google
+    </button>
+    <button class="ui large labeled twitter icon button social" id="twitter-login">
+      <i class="twitter icon"></i>
+      Sign in with Twitter
+    </button>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
+  <div class="column">
+  <form class="ui form" id="passwordForm">
+    <div class="field">
+      <label for="email">Username or Email</label>
+      <div class="ui left ab input">
+        <input type="text" name="usernameOrEmail">
+      </div>
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <div class="ui left ab input">
+        <input type="password" name="password">
+      </div>
+    </div>
+    <button type="submit" class="ui teal animated button">
+      <div class="visible content">Login</div>
+      <div class="hidden content">
+        <i class="right arrow icon"></i>
+      </div>
+    </button>
+    <div class="ui error message"></div>
+  </form>
+  <br>
+  <div>New user? <a href="/signup">Signup</a></div>
+
+</div>
+
+</div>
+</template>
