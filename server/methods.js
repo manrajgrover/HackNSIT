@@ -16,6 +16,7 @@ Meteor.methods({
 		//   return result;
 		// });
 		// return results;
+		this.unblock();
 		var url="http://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+long;
 		try{
 			var result = HTTP.call("GET",url);
@@ -27,7 +28,32 @@ Meteor.methods({
 		console.log(x);
 		return x;
 	},
-	'setEvent':function(){
+	'setEvent':function(obj){
+		var user=Meteor.user();
+		//latitude,longitude,address
+		console.log(obj);
+		if(!user)
+		{
+			console.log('User not logged in');
+			return {
+				logged:false
+			};
+		}
+		else{
+			obj.userId=Meteor.userId();
+			obj.timestamp=new Date();
+			if(user.profile&&user.profile.firstName)
+				obj.username= user.profile.firstName;
+			else
+				obj.username=user.username;
+			Events.insert(obj);
+			return{
+				logged:true
+			};
+			// return user.profile.firstName||user.username;
+		}
+
+		// var x=Events.insert({})
 		
 	}
 });
