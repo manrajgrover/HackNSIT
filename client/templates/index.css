@@ -1,0 +1,46 @@
+.floater {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: fixed;
+  bottom: 0;
+  background-color: teal;
+}
+.floater iframe {
+  width: 100%;
+  height: 100%;
+}
+.floater i {
+  font-size: 2.0em;
+  width: 100%;
+  text-align: center;
+  color: blanchedalmond;
+}
+.floater-closed {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+  height: 40px;
+}
+.floater-closed i {
+  margin: 0 auto;
+  margin-top: 2px;
+}
+@media only screen and (min-width: 600px) {
+  .floater-closed {
+    width: 120px;
+    right: 20px;
+  }
+  .floater-closed:hover {
+    transform: scale(1.2);
+  }
+}
+.floater-open {
+  width: 100%;
+  right: 0;
+  height: 100vh;
+  z-index: 100000;
+}
+.floater-open i {
+  margin: 0 auto;
+  margin-top: 2px;
+}

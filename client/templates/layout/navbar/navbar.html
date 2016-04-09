@@ -1,8 +1,33 @@
 <template name="navbar">
+<style>
 
+	
+	 	.sos {
+			    position: fixed;
+			    left: 45%;
+			    top: 5px;
+			    z-index:9999999;
+
+			   
+			}
+	 @media only screen and (min-width:520px ){
+			.sos {
+			    position: fixed;
+			    left: 45%;
+			    top: 20px;
+			    z-index:99999999;
+
+			   
+			}
+	    }
+</style>
+    <div class=" item simple sos">
+		<div class="ui button red inverted">SOS</div>
+    </div>
 <div id="navbar" class="ui ab top fixed segment menu">
   <div class="item brand">
     <a href="/">Helpy</a>
+
   </div>
   {{#if currentUser}}
     <div class="ui right dropdown simple item" id="navbarUserDropdown">
