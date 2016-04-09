@@ -2,48 +2,17 @@
 * @Author: Manraj Singh
 * @Date:   2016-04-09 23:30:32
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-04-10 00:38:09
+* @Last Modified time: 2016-04-10 02:05:02
 */
 
 Template.admin.helpers({
 	anyPost:function(){
-		return true;
+		return (Events.find({}, {sort: {timestamp: -1}}).count()>0)?true:false;
 		//return (Posts.find({"validTill":{"$gt":new Date()}}).count()>0)?true:false;
 	},
-	allPosts:function(){
+	allPosts: function(){
 		var count=1;
-		//var x= POST.find({"validTill":{"$gt":new Date()}}).fetch();
-		var x = [{
-			id: "sandkjasnkdn",
-			name: "Manraj Singh",
-			contact: "9898989898",
-			address: "Hahahahahahahhahahahahhahahahahahhaha",
-			postDetails: "This is an SOS call, muahaha pls halpsjkaajsdkjhas j kdhajkshdkjahs jkdhkajshdkjah skjdhakjshd jkashdkjh me lelz #Munna"
-		},{
-			id: "sandkjasnkdn",
-			name: "Manraj Singh",
-			contact: "9898989898",
-			address: "Hahahahahahahhahahahahhahahahahahhaha",
-			postDetails: "This is an SOS call, muahaha pls halp me lelz #Munna"
-		},{
-			id: "sandkjasnkdn",
-			name: "Manraj Singh",
-			contact: "9898989898",
-			address: "Hahahahahahahhahahahahhahahahahahhaha",
-			postDetails: "This is an SOS call, muahaha pls halp me lelz #Munna"
-		},{
-			id: "sandkjasnkdn",
-			name: "Manraj Singh",
-			contact: "9898989898",
-			address: "Hahahahahahahhahahahahhahahahahahhaha",
-			postDetails: "This is an SOS call, muahaha pls halp me lelz #Munna"
-		},{
-			id: "sandkjasnkdn",
-			name: "Manraj Singh",
-			contact: "9898989898",
-			address: "Hahahahahahahhahahahahhahahahahahhaha",
-			postDetails: "This is an SOS call, muahaha pls halp me lelz #Munna"
-		}];
+		var x = Events.find({}, {sort: {timestamp: -1}}).fetch();
 		x.forEach(function(sos){
 			sos.index=count++;
 		});

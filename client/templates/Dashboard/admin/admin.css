@@ -2,14 +2,14 @@
 * @Author: Manraj Singh
 * @Date:   2016-04-09 23:30:39
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-04-10 00:05:32
+* @Last Modified time: 2016-04-10 01:57:03
 */
 .offerDisp{
 	background: #e5e5e5;
 }
 
 .pd{
-	font-size:20px;
+	font-size:15px;
 	line-height: 30px;
 	word-wrap: break-word;
 }

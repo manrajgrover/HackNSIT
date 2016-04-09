@@ -2,8 +2,30 @@
 * @Author: Manraj Singh
 * @Date:   2016-04-09 21:32:18
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-04-10 00:44:59
+* @Last Modified time: 2016-04-10 04:50:38
 */
+
+var map;
+
+function markOnMap(event, details){
+  var longitude = event.longitude;
+  var latitude = event.latitude;
+  var screen_name = event.username;
+  var text = event.description;
+  var profileImageURL = details[0].profile.picture;
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(latitude, longitude),
+    map: map,
+    icon: profileImageURL,
+    title: screen_name
+  });
+  var infowindow = new google.maps.InfoWindow({
+    content: screen_name+" "+text
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}
 
 function initialize(){
 	if (navigator.geolocation) {
@@ -47,8 +69,7 @@ function initialize(){
 Template.map.onRendered(function(){
 	initialize();
   $('.ui.checkbox').checkbox();
-  $('#eventForm')
-    .form({
+  $('#eventForm').form({
       fields: {
         crime: {
           identifier : 'crime',
@@ -64,6 +85,17 @@ Template.map.onRendered(function(){
         }
       }
     });
+  $(".ui.dropdown").dropdown();
+  this.autorun(function(){
+      var x = Events.find({}, {sort: {timestamp: -1}}).fetch();
+      console.log(x);
+      if(x.length===0)
+        return; 
+      var event = x[0];
+      var y =  Meteor.users.find({_id: event.userId}).fetch();
+      console.log(y);
+      markOnMap(event,y);
+  }.bind(this));
 });
 
 
