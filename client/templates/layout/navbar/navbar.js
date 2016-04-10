@@ -26,6 +26,24 @@ Template.navbar.events({
 		Meteor.logout();
 		sAlert.info('You have successfully logged out. Take care');
 	},
+	'click .soscall': function(){
+		$('#soscall').addClass('loading');
+		Meteor.call('sos',function(err,result){
+		      if(err){
+		        console.log(err);
+		        sAlert.error(err.reason);
+		      }
+		      else{
+		        if(result.logged===false){
+		          sAlert.error('Logged out');   
+		          Router.go('signin');
+		        }else{
+		          sAlert.info('Your emergency contacts have been alerted');
+		          $('#soscall').removeClass('loading');  
+		        } 
+		      }
+		});
+	}
 	// 'click #signIn':function(event,template){
 	// 	$('#signInModal').modal('show');
 		
