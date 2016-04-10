@@ -9,8 +9,8 @@ Meteor.startup(function () {
 
 		ServiceConfiguration.configurations.insert({
 		    service: 'facebook',
-		    appId: settings.facebook.appId ||'1605417939713165',
-		    secret: settings.facebook.secret ||'9297237f1bbe036dbac24231cecef065',
+		    appId: settings.facebook.appId ||'1734700473442235',
+		    secret: settings.facebook.secret ||'bdec54e38b5ce82556677a358eba1cb6',
 		    requestPermission: ['email','publish_actions']
 		});
 
@@ -20,7 +20,7 @@ Meteor.startup(function () {
 		
 		Accounts.loginServiceConfiguration.insert({
 		  service: "twitter",
-		  consumerKey: settings.twitter.consumerKey || "PwdsVBXRneX7REuJ8mclsoyUd",
+		  consumerKey: settings.twitter.consumerKey ||"PwdsVBXRneX7REuJ8mclsoyUd",
 		  secret: settings.twitter.secret|| "vrNbytV4fYBB1x9Lg3aTdasYG3K6jDOiVhTnxSeNDoPNZMMwfq",
 		  requestPermission: ['email']
 		});
