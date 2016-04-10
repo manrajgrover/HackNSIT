@@ -35,6 +35,7 @@ accounts-twitter
 juliancwirko:s-alert
 juliancwirko:s-alert-flip
 service-configuration
+reactive-var
 
 npm-container
 http

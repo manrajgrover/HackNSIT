@@ -12,7 +12,14 @@
 }
 
 #eventForm{
-	width: 50%;
+	min-width: 250px;
+	width: 90%;
+}
+
+@media only screen and (min-width: 520px) { 
+	#eventForm{
+		width: 50%;
+	}
 }
 
 

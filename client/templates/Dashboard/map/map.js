@@ -5,6 +5,8 @@
 * @Last Modified time: 2016-04-10 04:50:38
 */
 
+var visible=new ReactiveVar(false);
+
 var map;
 
 function markOnMap(event, details){
@@ -64,7 +66,11 @@ function initialize(){
 		// show error message
 	}
 }
-
+Template.map.helpers({
+  icon: function(){
+    return visible.get()?'fa-minus':'fa-plus';
+  }
+});
 
 Template.map.onRendered(function(){
 	initialize();
@@ -99,7 +105,18 @@ Template.map.onRendered(function(){
 });
 
 
+
 Template.map.events({
+  'click #formButton': function(){
+    if(!visible.get()){
+      $('.form-container').addClass('visible');
+      visible.set(true);
+    }else{
+      $('.form-container').removeClass('visible');
+      visible.set(false);
+    }
+  },
+
   'submit #eventForm': function(e, template) {
     e.preventDefault();
     var obj={};
