@@ -28,6 +28,7 @@ function markOnMap(event, details){
     position: new google.maps.LatLng(latitude, longitude),
     map: map,
     icon: image,
+    draggable:true,
     title: screen_name
   });
   var infowindow = new google.maps.InfoWindow({
@@ -70,10 +71,17 @@ function initialize(){
 				fillOpacity: 0.35,
 				map: map,
 				center: myLatlng,
-				radius: 1009.34
+				radius: 1309.34
 			};
 			var circle = new google.maps.Circle(circleOptions);
-      
+		    var x = Events.find({}, {sort: {timestamp: -1}}).fetch();
+     		console.log(x);
+      		if(x.length===0)
+        		return;
+      		for(var i=0;i<x.length;i++){
+        		var y =  Meteor.users.find({_id: x[i].userId}).fetch();
+        		markOnMap(x[i],y);
+      		}
 		},
 		function(msg){
 			//var s = document.getElementById("status");
