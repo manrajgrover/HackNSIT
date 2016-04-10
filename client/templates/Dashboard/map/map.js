@@ -172,6 +172,7 @@ Template.map.events({
           sAlert.error('Logged out');   
           Router.go('signin');
         }else{
+          $('.floater').remove();
           var eventId=result.eventId;
           sAlert.info('Crime reported successfully.');
           $('#submitButton').removeClass('loading');
