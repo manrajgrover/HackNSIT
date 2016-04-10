@@ -121,7 +121,8 @@ Template.map.events({
     e.preventDefault();
     var obj={};
     obj.crimeType=e.target.crime.value;
-    obj.broadcast=e.target.broadcast.value;
+    obj.broadcast = $('#broadcastCheck').prop('checked') ? 'on' : 'off';
+    console.log(obj.broadcast);
     obj.description=e.target.description.value;
     obj.latitude=Session.get('setLat');
     obj.longitude=Session.get('setLong');

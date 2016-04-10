@@ -2,13 +2,23 @@ Template.landingPage.helpers({
 	'events':function(){
 
 		console.log(Events.find().count());
-		return Events.find().fetch();
+		return Events.find({},{sort:{timestamp:-1}});
 	},
 	'moment':function(time){
 		return moment(time).fromNow();
 	}
 });
 
+
+Template.landingPage.onRendered(function(){
+	var frame= document.createElement('iframe');
+	frame.src='https://dev.peery.me';
+
+	$(frame).attr({'seamless':'seamless'});
+	$('#broadcastFrame').append(frame);
+		
+
+});
 // Template.landingPage.onRendered(function(){
 // 	var self=this;
 // 	//Session.set('selectedCity',localStorage.getItem('selectedCity'));
