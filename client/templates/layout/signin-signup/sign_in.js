@@ -71,7 +71,7 @@ var loginMethods = {
 
 var loginToast= function(){
   Meteor.setTimeout(function(){
-      sAlert.info('Welcome to PitMobil!');
+      sAlert.info('Welcome to iConnect!');
     },200);
  
 };
@@ -122,29 +122,6 @@ Template.signIn.events({
   },
   'click #google-login':function(event){
     loginMethods.google();
-  },
-  'submit #recoveryForm': function(event) {
-    event.preventDefault();
-    var email = event.target.email.value.trim();
-
-    Meteor.call('userPasswordResetEmailSend', email, function(error) {
-      if(error)
-        sAlert.error('Something went wrong: ' + error.reason);
-      else
-        sAlert.info('An email with account recovery instructions has been sent to your email address. Make sure to check your spam too.');
-    });
   }
 });
 
-Accounts.onResetPasswordLink(function(token, done) {
-  var newPassword = window.prompt("Enter a new password: (it must contain atleast\n6 charaters)").trim();
-  // console.log(newPassword);
-  while(newPassword.length < 6)
-    newPassword = window.prompt("The new password must contain\natleast 6 characters.\nEnter a new password:");
-  Accounts.resetPassword(token, newPassword, function(error) {
-    if(error)
-      sAlert.error('This recovery link is no longer valid. Request a new link from the SignIn panel.');
-    else
-      sAlert.info('Your account has been successfully recovered! Welcome back to PitMobil!');
-  });
-});

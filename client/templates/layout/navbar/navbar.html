@@ -26,7 +26,7 @@
     </div>
 <div id="navbar" class="ui ab top fixed segment menu">
   <div class="item brand">
-    <a href="/">Helpy</a>
+    <a href="/">iConnect</a>
 
   </div>
   {{#if currentUser}}
@@ -44,7 +44,7 @@
 
 <div id="navbar-mobile" class="ui ab top fixed menu">
   <div class="item">
-    <a href="/"><b>Helpy</b></a>
+    <a href="/"><b>iConnect</b></a>
   </div>
   <a class="item right focus toggle-sidebar" sidebar-toggle><i class="fa fa-bars"></i></a>
   </div>
@@ -52,23 +52,20 @@
     {{#if currentUser}}
         <i class="fa fa-user fa-2x icon-silver"></i> <span class="h-space-light"></span>Hi {{username}}!
         <br>
-        <a class="item" href="/profile">Profile</a>
+        <a class="item" href="/admin">Profile</a>
         <a class="item logout" href="#">Logout</a>
     {{else}}
       <a class="item right focus" id="signIn" href="/signin">Sign in</a>
       <div class="ui modal" id="signInModal">
-        <!-- <div class="header">Header</div>
-        <div class="content">
-          <p>BC</p>
-          <p>Kya kar raha hai</p>
-          <p>Oyee</p> -->
           {{> signIn}}
-    <!-- </div> -->
       </div>
 
     {{/if}}
     <a class="item" href="/">
       Home
+    </a>
+    <a class="item" href="/admin">
+      Profile
     </a>
     
   </div>
@@ -82,7 +79,7 @@
 
 <template name="userDropdown">
   <div class="menu">
-  	<a class="item" href="/profile">Profile</a>
+  	<a class="item" href="/admin">Profile</a>
     <a class="item logout" href="#">Logout</a>
     <a href="/contact" class="item contact">Contact Us</a>
   </div>
