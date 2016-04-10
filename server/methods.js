@@ -58,6 +58,10 @@ Meteor.methods({
 		
 	},
 	'sos':function(){
-		
+		console.log("Here in SOS");
+		//Nexmo.sendTextMessage("9811040427","9650353437","Hey! Your friend is in danger!");
+		return{
+			logged:true
+		};
 	}
 });

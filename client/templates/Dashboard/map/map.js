@@ -2,7 +2,7 @@
 * @Author: Manraj Singh
 * @Date:   2016-04-09 21:32:18
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-04-10 08:12:44
+* @Last Modified time: 2016-04-10 12:57:47
 */
 
 var visible=new ReactiveVar(false);
@@ -74,14 +74,14 @@ function initialize(){
 				radius: 1309.34
 			};
 			var circle = new google.maps.Circle(circleOptions);
-		    var x = Events.find({}, {sort: {timestamp: -1}}).fetch();
-     		console.log(x);
-      		if(x.length===0)
-        		return;
-      		for(var i=0;i<x.length;i++){
-        		var y =  Meteor.users.find({_id: x[i].userId}).fetch();
-        		markOnMap(x[i],y);
-      		}
+	    var x = Events.find({}, {sort: {timestamp: -1}}).fetch();
+   		console.log(x);
+    		if(x.length===0)
+      		return;
+    		for(var i=0;i<x.length;i++){
+      		var y =  Meteor.users.find({_id: x[i].userId}).fetch();
+      		markOnMap(x[i],y);
+    		}
 		},
 		function(msg){
 		});
@@ -174,7 +174,7 @@ Template.map.events({
           var eventId=result.eventId;
           sAlert.info('Crime reported successfully.');
           $('#submitButton').removeClass('loading');
-          if(obj.broadcast){
+          if(obj.broadcast==='on'){
             var d= document.createElement('div');
               d.innerHTML='<i class="fa fa-video-camera">';
               $(document.body).append($(d).addClass('floater-closed').addClass('floater'));
