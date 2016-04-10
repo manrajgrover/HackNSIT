@@ -20,8 +20,7 @@ Template.landingPage.onRendered(function(){
 	frame.src='https://dev.peery.me';
 
 	$(frame).attr({'seamless':'seamless'});
-	$('#broadcastFrame').append(frame);	
-
+	$('#broadcastFrame').append(frame);
 });
 // Template.landingPage.onRendered(function(){
 // 	var self=this;

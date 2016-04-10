@@ -24,7 +24,7 @@ Template.navbar.helpers({
 Template.navbar.events({
 	'click .logout':function(event){
 		Meteor.logout();
-		sAlert.info('You have successfully logged out.');
+		sAlert.info('You have successfully logged out. Take care');
 	},
 	// 'click #signIn':function(event,template){
 	// 	$('#signInModal').modal('show');
