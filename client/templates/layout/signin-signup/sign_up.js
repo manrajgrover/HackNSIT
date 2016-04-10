@@ -34,15 +34,6 @@ Template.signUp.onRendered(function(){
             }
           ]
         },
-        // confirm:{
-        //   identifier: 'confirm',
-        //   rules:[
-        //   {
-        //     type: 'match[password]',
-        //     prompt:' Please confirm your password'
-        //   }
-        //   ]
-        // },
         tnc:{
           identifier: 'tnc',
           rules:[
@@ -63,14 +54,6 @@ Template.signUp.events({
     var username=e.target.username.value;
     var email = e.target.email.value;
     var password = e.target.password.value;
-    // var confirm = e.target.confirm.value;
-    // if(!username)
-    //   throwError('Username is required!');
-    // else if(!email)
-    //   throwError('E-mail is required');
-    // else if(password!==confirm)
-    //   throwError('The confirm password should match');
-    // else
 
     $('#submitButton').addClass('loading');
 

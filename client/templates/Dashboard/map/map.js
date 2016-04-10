@@ -84,8 +84,6 @@ function initialize(){
       		}
 		},
 		function(msg){
-			//var s = document.getElementById("status");
-			//s.innerHTML = (typeof msg == "string") ? "<h1 style='text-align:center;'>"+msg+"</h1>" : "<h1>Failed to access your location!</h1><p>Please change your browser location settings and allow this website to access your location.</p>";
 		});
 	} else { 
 		// show error message
@@ -204,17 +202,6 @@ Template.map.events({
         
       }
     });
-
-    // var email = e.target.email.value;
-    // var password = e.target.password.value;
-    // var confirm = e.target.confirm.value;
-    // if(!username)
-    //   throwError('Username is required!');
-    // else if(!email)
-    //   throwError('E-mail is required');
-    // else if(password!==confirm)
-    //   throwError('The confirm password should match');
-    // else
 
    
 
