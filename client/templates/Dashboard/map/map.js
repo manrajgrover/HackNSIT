@@ -15,16 +15,26 @@ function markOnMap(event, details){
   var screen_name = event.username;
   var text = event.description;
   var profileImageURL = details[0].profile.picture;
+  var image = {
+    url: profileImageURL,
+    // This marker is 30 pixels wide by 30 pixels high.
+    scaledSize: new google.maps.Size(30, 30),
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(15, 15)
+  };
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(latitude, longitude),
     map: map,
-    icon: profileImageURL,
+    icon: image,
     title: screen_name
   });
   var infowindow = new google.maps.InfoWindow({
     content: screen_name+": "+text
   });
   marker.addListener('click', function() {
+  	console.log(infowindow.content);
     infowindow.open(map, marker);
   });
 }
@@ -36,16 +46,22 @@ function initialize(){
 			latitude = position.coords.latitude;
 			longitude = position.coords.longitude;
 			var myLatlng = new google.maps.LatLng(latitude, longitude);
+			var myLatlng2 = new google.maps.LatLng(latitude, longitude+1);
 			var mapOptions = {
-				zoom: 2,
-				center: myLatlng
-			}
+				streetViewControl: false,
+				tilt: 0,
+				center:myLatlng,
+				zoom:15
+			};
 			map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-			var marker = new google.maps.Marker({
-				position: myLatlng,
-				map: map,
-				title:"Your Location"
-			});
+			var mapMinZoom = 12;
+			var mapMaxZoom = 18;
+			var geoloccontrol = new klokantech.GeolocationControl(map, mapMaxZoom);
+			// var marker = new google.maps.Marker({
+			// 	position: myLatlng,
+			// 	map: map,
+			// 	title:"Your Location"
+			// });
 			var circleOptions = {
 				strokeColor: '#B0C4DE',
 				strokeOpacity: 0.8,
@@ -54,7 +70,7 @@ function initialize(){
 				fillOpacity: 0.35,
 				map: map,
 				center: myLatlng,
-				radius: 2609.34
+				radius: 1009.34
 			};
 			var circle = new google.maps.Circle(circleOptions);
 		},
@@ -117,6 +133,13 @@ Template.map.events({
     }
   },
 
+  'click #map-canvas': function(){
+  	if(visible.get()){
+  		$('.form-container').removeClass('visible');
+  		visible.set(false);
+  	}
+  },
+  
   'submit #eventForm': function(e, template) {
     e.preventDefault();
     var obj={};
@@ -146,6 +169,7 @@ Template.map.events({
         
       }
     });
+
     // var email = e.target.email.value;
     // var password = e.target.password.value;
     // var confirm = e.target.confirm.value;

@@ -16,8 +16,6 @@ Template.landingPage.onRendered(function(){
 
 	$(frame).attr({'seamless':'seamless'});
 	$('#broadcastFrame').append(frame);
-		
-
 });
 // Template.landingPage.onRendered(function(){
 // 	var self=this;
