@@ -2,6 +2,10 @@
 
 ## Project Description
 
+Link to Google Slides Presentation - 
+https://docs.google.com/presentation/d/11idG6D5QvYInQcYoDa5E9CRCB5b_i05O_E-cICluJ00/edit?usp=sharing
+
+
 iConnect, a Social Reporting App, provides an easy-to-use yet powerful way to report crimes in REAL-TIME by the citizens.
 
 The app has many interactive features like Pinning on Google Maps, Emergency Video Broadcast by local authorities, and one-to-one Video Chat with concerned authorities for quick resolution or crime reporting. These video snippets can be used as video evidences in case of crime reporting.
