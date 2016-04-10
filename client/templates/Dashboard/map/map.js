@@ -73,6 +73,7 @@ function initialize(){
 				radius: 1009.34
 			};
 			var circle = new google.maps.Circle(circleOptions);
+      
 		},
 		function(msg){
 			//var s = document.getElementById("status");

@@ -9,6 +9,11 @@ Template.landingPage.helpers({
 	}
 });
 
+Template.landingPage.events({
+	'click #viewOnMap':function(){
+		Router.go('map');
+	}
+});
 
 Template.landingPage.onRendered(function(){
 	var frame= document.createElement('iframe');
