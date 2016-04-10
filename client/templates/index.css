@@ -1,4 +1,5 @@
 .floater {
+  z-index: 999999999;
   cursor: pointer;
   transition: all 0.2s ease;
   position: fixed;
@@ -6,8 +7,9 @@
   background-color: teal;
 }
 .floater iframe {
+  border: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 28px);
 }
 .floater i {
   font-size: 2.0em;

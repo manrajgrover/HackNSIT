@@ -46,8 +46,9 @@ Meteor.methods({
 				obj.username= user.profile.firstName;
 			else
 				obj.username=user.username;
-			Events.insert(obj);
+			var id=Events.insert(obj);
 			return{
+				eventId: id,
 				logged:true
 			};
 			// return user.profile.firstName||user.username;

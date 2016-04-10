@@ -71,7 +71,7 @@ var loginMethods = {
 
 var loginToast= function(){
   Meteor.setTimeout(function(){
-      sAlert.info('Welcome to PitMobil!');
+      sAlert.info('Welcome to Helpy!');
     },200);
  
 };

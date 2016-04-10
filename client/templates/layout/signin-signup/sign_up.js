@@ -102,7 +102,7 @@ Accounts.onEmailVerificationLink(function(token, done) {
     if(error) {
       sAlert.error('This verification link is no longer valid. Request a new link from your user panel.');
     } else {
-      sAlert.info('Your email has been verified! Welcome to PitMobil!');
+      sAlert.info('Your email has been verified! Welcome to helpy!');
     }
   });
 });

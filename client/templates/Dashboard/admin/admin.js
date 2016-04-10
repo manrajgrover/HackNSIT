@@ -26,3 +26,24 @@ Template.admin.events({
 		console.log(this.id);
 	}
 });
+
+Template.admin.onRendered(function(){
+	var d= document.createElement('div');
+	  d.innerHTML='<i class="fa fa-video-camera">';
+	  $(document.body).append($(d).addClass('floater-closed').addClass('floater'));
+	  var open =false;
+	  $('.floater').click(function(){
+	    if(open===false){
+	      var iframe = document.createElement('iframe');
+	      iframe.src = "https://dev.peery.me/help/"+Session.get('id')+'?support=true';//change
+	      $(this).append(iframe);
+	      $(this).removeClass('floater-closed').addClass('floater-open');   
+	      
+	      open=true;
+	    }else{
+	      $('iframe').remove();
+	      $(this).removeClass('floater-open').addClass('floater-closed')
+	      open=false;
+	    }
+	  })
+});
