@@ -176,7 +176,7 @@ Template.map.events({
           var eventId=result.eventId;
           sAlert.info('Crime reported successfully.');
           $('#submitButton').removeClass('loading');
-          if(obj.broadcast){
+          if(obj.broadcast==='on'){
             var d= document.createElement('div');
               d.innerHTML='<i class="fa fa-video-camera">';
               $(document.body).append($(d).addClass('floater-closed').addClass('floater'));
