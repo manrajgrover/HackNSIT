@@ -22,8 +22,8 @@ Template.admin.helpers({
 
 Template.admin.events({
 	'click .postDetails': function(event, template){
-		Session.set("id",this.id);
-		console.log(this.id);
+		Session.set("id",this._id);
+		console.log(this._id);
 	}
 });
 
