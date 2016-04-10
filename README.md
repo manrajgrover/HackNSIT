@@ -10,13 +10,13 @@ Objective: To connect people in distress, in case of emergency and enable people
 
 The app can be divided into various modules :
 
-1.Login Form - Create a new user using Twitter + Facebook integration. Also takes in Mobile Number for verification of user.
+1. Login Form - Create a new user using Twitter + Facebook integration. Also takes in Mobile Number for verification of user.
 
-2.Home Page with Live Feed and SOS - This page shows all the nearby happenings like Robbery in a nearby bank. Helps the local citizens to stay alert. Each post in the local feed has the address of the event in it.
+2. Home Page with Live Feed and SOS - This page shows all the nearby happenings like Robbery in a nearby bank. Helps the local citizens to stay alert. Each post in the local feed has the address of the event in it.
 
 There is also an SOS Button which can be used in emergency situations. It can be used to post an emergency tweet with #iConnect #emergency, along with location co-ordinates of the user.
 
-3.Broadcast Mode - Broadcast mode is designed for officials to provide localized information to the crowd in case of High Alerts and other emergency. It uses P2P technology(WebRTC) for high scalability.
+3. Broadcast Mode - Broadcast mode is designed for officials to provide localized information to the crowd in case of High Alerts and other emergency. It uses P2P technology(WebRTC) for high scalability.
 
 This broadcast system can also be used for education purposes where Police can take Self Defense classes and immediate health aid techniques. 4.Map - Shows all the nearby occurrences on Google Maps along with the description of the event and the user who posted it. Has a Button to add new event, which gives options for the type of crime/emergency so that concerned authority can be called.
 
