@@ -29,6 +29,15 @@ While reporting an event, the user can also choose to provide a live video feed 
 ## Software platform used
     Meteor, Cordova and MongoDB
 
+## Project Structure
+
+* /client - Contains all the client side code.
+    * /lib - Vendor files are contained in this folder
+    * /templates - Contains all Client Side templates - HTML, CSS and JS
+* /lib - Contains all the Routing, Collections and Publications
+* /packages - Contains all the reusable contents of the app
+* /server - Contains all the server side code and configurations
+
 ## User flows
 * A user enters the Web App.
 * He/She is shown the Live Stream of Newsfeed as well as Live Broadcasts.
@@ -56,12 +65,3 @@ The app has been ported on Android as well as iOS using Cordova plugins.
 * We also plan to extend this in case of Natural Disasters by creating heat maps.
 * We plan to track SOS being provided in real time.
 * We can provide analytics for crime events, based on Male/Female, locations and type of events and time of day.
-
-## Project Structure
-
-* /client - Contains all the client side code.
-    * /lib - Vendor files are contained in this folder
-    * /templates - Contains all Client Side templates - HTML, CSS and JS
-* /lib - Contains all the Routing, Collections and Publications
-* /packages - Contains all the reusable contents of the app
-* /server - Contains all the server side code and configurations
