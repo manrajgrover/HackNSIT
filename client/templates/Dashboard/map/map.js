@@ -2,7 +2,7 @@
 * @Author: Manraj Singh
 * @Date:   2016-04-09 21:32:18
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-04-10 04:50:38
+* @Last Modified time: 2016-04-10 08:12:44
 */
 
 var visible=new ReactiveVar(false);
@@ -22,7 +22,7 @@ function markOnMap(event, details){
     title: screen_name
   });
   var infowindow = new google.maps.InfoWindow({
-    content: screen_name+" "+text
+    content: screen_name+": "+text
   });
   marker.addListener('click', function() {
     infowindow.open(map, marker);
