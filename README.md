@@ -41,6 +41,16 @@ While reporting an event, the user can also choose to provide a live video feed 
 * There is also an Admin Panel, which shows Real Time updates to concerned authorities so as to act on them soon as they get information.
 * This app can be used as a Web App as well as Android app.
 
+## How to run?
+
+To run the project:
+
+* Download the Zip file and extract it.
+* Change directory to the extracted folder and run `$ meteor` command.
+* It will create a local server and you can view app at `localhost:3000`, 3000 being default port.
+
+The app has been ported on Android as well as iOS using Cordova plugins.
+
 ## Next level of API designs
 * We plan to extend Broadcast API. It currently connects user streams(video/audio) using unique sessions. In case of Broadcast, each peer may act as a relay which  helps in stability.
 * We also plan to extend this in case of Natural Disasters by creating heat maps.
