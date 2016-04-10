@@ -14,7 +14,7 @@ The app can be divided into various modules :
 
 2. Home Page with Live Feed and SOS - This page shows all the nearby happenings like Robbery in a nearby bank. Helps the local citizens to stay alert. Each post in the local feed has the address of the event in it.
 
-There is also an SOS Button which can be used in emergency situations. It can be used to post an emergency tweet with #iConnect #emergency, along with location co-ordinates of the user.
+    There is also an SOS Button which can be used in emergency situations. It can be used to post an emergency tweet with     #iConnect #emergency, along with location co-ordinates of the user.
 
 3. Broadcast Mode - Broadcast mode is designed for officials to provide localized information to the crowd in case of High Alerts and other emergency. It uses P2P technology(WebRTC) for high scalability.
 
