@@ -57,6 +57,7 @@ function initialize(){
 				radius: 2609.34
 			};
 			var circle = new google.maps.Circle(circleOptions);
+      
 		},
 		function(msg){
 			//var s = document.getElementById("status");

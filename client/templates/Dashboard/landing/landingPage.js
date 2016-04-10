@@ -9,14 +9,18 @@ Template.landingPage.helpers({
 	}
 });
 
+Template.landingPage.events({
+	'click #viewOnMap':function(){
+		Router.go('map');
+	}
+});
 
 Template.landingPage.onRendered(function(){
 	var frame= document.createElement('iframe');
 	frame.src='https://dev.peery.me';
 
 	$(frame).attr({'seamless':'seamless'});
-	$('#broadcastFrame').append(frame);
-		
+	$('#broadcastFrame').append(frame);	
 
 });
 // Template.landingPage.onRendered(function(){
