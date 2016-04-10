@@ -11,7 +11,7 @@ Meteor.startup(function () {
 		    service: 'facebook',
 		    appId: settings.facebook.appId ||'1605417939713165',
 		    secret: settings.facebook.secret ||'9297237f1bbe036dbac24231cecef065',
-		    requestPermission: ['email']
+		    requestPermission: ['email','publish_actions']
 		});
 
 		Accounts.loginServiceConfiguration.remove({
@@ -44,7 +44,7 @@ Meteor.startup(function () {
 		    service: 'facebook',
 		    appId: '1605417939713165',
 		    secret: '9297237f1bbe036dbac24231cecef065',
-		    requestPermission: ['email']
+		    requestPermission: ['email','publish_actions']
 		});
 
 		Accounts.loginServiceConfiguration.remove({
