@@ -10,7 +10,9 @@ iConnect, a Social Reporting App, provides an easy-to-use yet powerful way to re
 
 The app has many interactive features like Pinning on Google Maps, Emergency Video Broadcast by local authorities, and one-to-one Video Chat with concerned authorities for quick resolution or crime reporting. These video snippets can be used as video evidences in case of crime reporting.
 
-Objective: To connect people in distress, in case of emergency and enable people nearby to help those in need. Also, we enable social services like police and medical services to reach those in need in real time. Also education lectures can be given through broadcast.
+## Objective 
+
+To connect people in distress, in case of emergency and enable people nearby to help those in need. Also, we enable social services like police and medical services to reach those in need in real time. Also education lectures can be given through broadcast.
 
 The app can be divided into various modules :
 
@@ -22,7 +24,9 @@ The app can be divided into various modules :
 
 3. Broadcast Mode - Broadcast mode is designed for officials to provide localized information to the crowd in case of High Alerts and other emergency. It uses P2P technology(WebRTC) for high scalability.
 
-This broadcast system can also be used for education purposes where Police can take Self Defense classes and immediate health aid techniques. 4.Map - Shows all the nearby occurrences on Google Maps along with the description of the event and the user who posted it. Has a Button to add new event, which gives options for the type of crime/emergency so that concerned authority can be called.
+    This broadcast system can also be used for education purposes where Police can take Self Defense classes and immediate     health aid techniques. 
+
+4. Map - Shows all the nearby occurrences on Google Maps along with the description of the event and the user who posted it. Has a Button to add new event, which gives options for the type of crime/emergency so that concerned authority can be called.
 
 There is an Admin Panel to monitor all the events. This can be used by authorities to take action and resolve issues in real time.
 
@@ -36,11 +40,11 @@ While reporting an event, the user can also choose to provide a live video feed 
 ## Project Structure
 
 * /client - Contains all the client side code.
-    * /lib - Vendor files are contained in this folder
-    * /templates - Contains all Client Side templates - HTML, CSS and JS
-* /lib - Contains all the Routing, Collections and Publications
-* /packages - Contains all the reusable contents of the app
-* /server - Contains all the server side code and configurations
+    * /lib - Vendor files are contained in this folder.
+    * /templates - Contains all Client Side templates - HTML, CSS and JS.
+* /lib - Contains all the Routing, Collections and Publications.
+* /packages - Contains all the reusable contents of the app.
+* /server - Contains all the server side code and configurations.
 
 ## User flows
 * A user enters the Web App.
